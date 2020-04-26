@@ -1,14 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        
+    <head><style>
+.button {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background:linear-gradient(#e66465, #9198e5);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+</style>
+<style>.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color:#ffff;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ffff;
+}
+
+.btn.active {
+  background-color: hotpink;
+  color: white;
+}
+    .row {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+</style>
+       
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Solid</title>
+        <title></title>
         <link href="css/styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link href="assets/img/" rel="icon">
   <link href="assets/img/" rel="apple-touch-icon">
         <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
@@ -16,15 +90,10 @@
     </head>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-            <a class="navbar-brand" href="index.html">Solid</a><button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button
+            <a class="navbar-brand" href="index.html"></a><button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button
             ><!-- Navbar Search-->
             <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
-                <div class="input-group">
-                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2" />
-                    <div class="input-group-append">
-                        <button class="btn btn-primary" type="button"><i class="fas fa-search"></i></button>
-                    </div>
-                </div>
+                <button class="w3-button w3-xlarge w3-circle w3-red w3-card-4" href = "form.html">+</button>
             </form>
             <!-- Navbar-->
             <ul class="navbar-nav ml-auto ml-md-0">
@@ -38,35 +107,26 @@
                 </li>
             </ul>
         </nav>
-        <div id="layoutSidenav">
+                <div id="layoutSidenav">
             <div id="layoutSidenav_nav">
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
+                            <img src="assets/img/logo-clear.png" alt="Smiley face" height="100" align ="center">
                             <div class="sb-sidenav-menu-heading">Home</div>
                             <a class="nav-link" href="index.html"
                                 ><div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Dashboard</a
-                            >
+                                Dashboard</a>
                             <div class="sb-sidenav-menu-heading">Do me a solid</div>
-                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts"
-                                ><div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                Requests
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div
-                            ></a>
-                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav"><a class="nav-link" href="layout-static.html">Requests</a></nav>
-                            </div>
-                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages"
+                            <a class="nav-link" href="layout-static.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Requests</a>
+
+                            <a a class="nav-link" href="login.html"
                                 ><div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                                Services
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div
-                            ></a>
-                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav"><a class="nav-link" href="login.html">Login</a>
+                                Services</a>
                        
-                                </nav>
-                            </div>
+            
                            
                         </div>
                     </div>
@@ -78,48 +138,116 @@
             </div>
             <div id="layoutSidenav_content">
                 <main>
-    <div class="container">
-  
-      <div class="card">
-          <h1>lol ok</h1>
-          <p>what should we do next </p>
-        </div>
-          <div class="card">
-          <h1>lol ok</h1>
-          <p>what should we do next </p>
-        </div>
-              <div class="card">
-          <h1>lol ok</h1>
-          <p>what should we do next </p>
-        </div>
-              <div class="card">
-          <h1>lol ok</h1>
-          <p>what should we do next </p>
-        </div>
-              <div class="card">
-          <h1>lol ok</h1>
-          <p>what should we do next </p>
-        </div>
-      <div class="card">
-          <h1>lol ok</h1>
-          <p>what should we do next </p>
-        </div>
-              <div class="card">
-          <h1>lol ok</h1>
-          <p>what should we do next </p>
-        </div>
-              <div class="card">
-          <h1>lol ok</h1>
-          <p>what should we do next </p>
-        </div>
-                    </div>
 
-                </main>
+                <div class="container" style="text-align:center">
+                    <div style="background-color:skyblue;padding:15px;text-align:center">
+    <div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('nature')"> Food</button>
+  <button class="btn" onclick="filterSelection('cars')"> Education</button>
+  <button class="btn" onclick="filterSelection('people')"> Other</button>
+                        </div>
+                    
+    <div class="row">
+  <div class="column nature">
+       <div class="card">
+          <h1>lol ok</h1>
+          <p>what should we do next </p>
+      </div>
+  </div>
+  <div class="column nature">
+         <div class="card">
+          <h1>lol ok</h1>
+          <p>what should we do next </p>
+      </div>
+  </div>
+        <div class="column cars">
+         <div class="card">
+          <h1>lol ok</h1>
+          <p>what should we do next </p>
+      </div>
+  </div>
+        <div class="column people">
+         <div class="card">
+          <h1>lol ok</h1>
+          <p>what should we do next </p>
+      </div>
+  </div>
+        <div class="column cars">
+         <div class="card">
+          <h1>lol ok</h1>
+          <p>what should we do next </p>
+      </div>
+  </div>
+        <div class="column people">
+         <div class="card">
+          <h1>lol ok</h1>
+          <p>what should we do next </p>
+      </div>
+  </div>
+        <div class="column cars">
+         <div class="card">
+          <h1>lol ok</h1>
+          <p>what should we do next </p>
+      </div>
+  </div>
+                    </div>
+            </div>
+                    </div>
+                    
+</main>
 
             </div>
         </div>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="js/scripts.js"></script>
+        <script>
+            
+            
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
     </body>
 </html>
