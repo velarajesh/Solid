@@ -15,6 +15,8 @@
     <orderEntry type="library" name="Chart.js" level="application" />
     <orderEntry type="library" name="bootstrap.bundle" level="application" />
     <orderEntry type="library" name="jquery-3.4.1" level="application" />
+    <orderEntry type="library" name="w3" level="application" />
+    <orderEntry type="library" name="widgets" level="application" />
   </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_CONFIGURATION" value="Jinja2" />

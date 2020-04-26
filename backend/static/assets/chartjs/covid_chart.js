@@ -28,7 +28,7 @@ $.get("https://covidtracking.com/api/v1/us/daily.json", function (data, status) 
     else{
         console.log("Unsuccessful query")
     }
-    var ctx = document.getElementById("myAreaChart");
+    var ctx = document.getElementById("covid-usa");
     var myLineChart = new Chart(ctx, {
         type: 'line',
         data: {

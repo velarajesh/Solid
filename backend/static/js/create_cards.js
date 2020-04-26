@@ -1,11 +1,5 @@
 const row = document.getElementById('newrow')
 
-
-request_json = {
-    "name": "Bilbo Baggins",
-    "type": "active",
-    "taken": false
-}
 $.get("/get_cards?cat=food&type=serv", function (data, status) {
     if (status === 'success') {
         data.forEach(item => {
@@ -47,6 +41,7 @@ $.get("/get_cards?cat=food&type=serv", function (data, status) {
     }
 })
 
-function assign_card(uid) {
-    console.log(uid)
+function assign_card(uid, id) {
+    console.log(uid) // make ajax request to take the card.
+    setTimeout(() => {document.getElementById(id).remove()}, 2000)
 }
